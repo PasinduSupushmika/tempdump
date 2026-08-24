@@ -1,0 +1,1 @@
+python3 -c "import socket; s=socket.create_connection(('127.0.0.1',102)); print('TCP connection successful'); s.close()"
