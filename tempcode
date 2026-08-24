@@ -1,1 +1,2 @@
 python3 -c "import socket; s=socket.create_connection(('127.0.0.1',102)); print('TCP connection successful'); s.close()"
+python3 -c "import socket; s=socket.create_connection(('127.0.0.1',102)); s.sendall(b'READ'); data=s.recv(4); print('Received:', data.hex()); s.close()"
