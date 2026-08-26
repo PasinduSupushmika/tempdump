@@ -2,3 +2,4 @@ python3 -c "import socket; s=socket.create_connection(('127.0.0.1',102)); print(
 python3 -c "import socket; s=socket.create_connection(('127.0.0.1',102)); s.sendall(b'READ'); data=s.recv(4); print('Received:', data.hex()); s.close()"
 python3 -c "import socket,struct; s=socket.create_connection(('127.0.0.1',102)); s.sendall(b'WRITE'+struct.pack('>HH',1410,1064)); print('Response:', s.recv(3)); s.close()"
 python3 -c "import socket,struct; s=socket.create_connection(('127.0.0.1',102)); s.sendall(b'WRITE'+struct.pack('>HH',1064,1064)); print('Response:', s.recv(3)); s.close()"
+sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/kali-archive-keyring.gpg
